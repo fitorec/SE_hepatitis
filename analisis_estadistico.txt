@@ -14,24 +14,25 @@ Las primera tabla nos muestran los datos estadísticos para el sexo 2 y 1 siendo
 5.- La probabilidad total refiere a las probabilidades que esten vivo y que pertenezca a determinado sexo.
 Nota: Quizás parezca algo confuso los campos prob, prob_total pero notar que para cada tabla la suma de prob nos devuelve 1, mientras que para las dos tablas las sumas de las columnas prob_total nos devuelve 1.
 
-+--------+------+----------+--------+------------+
-| estado | sexo | muestras | prob   | prob_total |
-+--------+------+----------+--------+------------+
-|      2 |    2 |       16 | 0.5000 |     0.1032 |
-|      2 |    1 |      107 | 3.3438 |     0.6903 |
-+--------+------+----------+--------+------------+
++--------+--------+----------+--------+------------+
+| estado | sexo   | muestras | prob   | prob_total |
++--------+--------+----------+--------+------------+
+| vivo   | mujer  |       16 | 0.1301 |     0.1032 |
+| vivo   | hombre |      107 | 0.8699 |     0.6903 |
++--------+--------+----------+--------+------------+
 
-+--------+------+----------+--------+------------+
-| estado | sexo | muestras | prob   | prob_total |
-+--------+------+----------+--------+------------+
-|      1 |    1 |       32 | 1.0000 |     0.2065 |
-+--------+------+----------+--------+------------+
++--------+--------+----------+--------+------------+
+| estado | sexo   | muestras | prob   | prob_total |
++--------+--------+----------+--------+------------+
+| muerto | hombre |       32 | 1.0000 |     0.2065 |
++--------+--------+----------+--------+------------+
 
 +------------------+
 | muestras_validas |
 +------------------+
 |              155 |
 +------------------+
+
 Esta ultima tabla nos muestra el tamaño de la muestras validas,la cual debe coincidir con la suma de las columnas muestras de las dos tablas anteriores. Notar que este valor puede cambiar en función del campo analizado ya que en algunos casos el valor para el campo analizado(en este caso sexo) puede aparecer como (?) lo cual significa que el valor es indefinido y por lo tanto no los podemos contar para el análisis estadístico, para mayores informes respecto a la distribución de campos indefinidos revisar el punto 8 del documento:
 
 https://archive.ics.uci.edu/ml/machine-learning-databases/hepatitis/hepatitis.names

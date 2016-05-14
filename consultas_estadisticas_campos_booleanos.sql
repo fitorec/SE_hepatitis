@@ -4,7 +4,8 @@
 
 SELECT "Mostrando datos estadisticos referente a la edad";
 
-SELECT estado,
+SELECT
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	SUM(edad) AS suma_edad,	
 	COUNT(id) AS muestras,
 	AVG(edad) AS promedio,
@@ -23,8 +24,8 @@ SELECT @num_vivos := COUNT(id) FROM `paciente` WHERE sexo IS NOT NULL AND estado
 SELECT @num_muertos := COUNT(id) FROM `paciente` WHERE sexo IS NOT NULL AND estado = 1;
 
 SELECT
-	estado,
-	sexo,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
+	REPLACE(REPLACE(sexo, 1, 'hombre'), 2, 'mujer') AS sexo,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_vivos AS prob,
 	COUNT(id)/@muestra AS prob_total
@@ -34,8 +35,8 @@ ORDER BY sexo DESC;
 
 
 SELECT
-	estado,
-	sexo,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
+	REPLACE(REPLACE(sexo, 1, 'hombre'), 2, 'mujer') AS sexo,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_muertos AS prob,
 	COUNT(id)/@muestra AS prob_total
@@ -52,7 +53,7 @@ SELECT @num_vivos := COUNT(id) FROM `paciente` WHERE esteroides IS NOT NULL AND 
 SELECT @num_muertos := COUNT(id) FROM `paciente` WHERE esteroides IS NOT NULL AND estado = 1;
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	esteroides,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_vivos AS prob,
@@ -63,7 +64,7 @@ ORDER BY esteroides DESC;
 
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	esteroides,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_muertos AS prob,
@@ -81,7 +82,7 @@ SELECT @num_vivos := COUNT(id) FROM `paciente` WHERE antivirales IS NOT NULL AND
 SELECT @num_muertos := COUNT(id) FROM `paciente` WHERE antivirales IS NOT NULL AND estado = 1;
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	antivirales,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_vivos AS prob,
@@ -92,7 +93,7 @@ ORDER BY antivirales DESC;
 
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	antivirales,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_muertos AS prob,
@@ -110,7 +111,7 @@ SELECT @num_vivos := COUNT(id) FROM `paciente` WHERE fatiga IS NOT NULL AND esta
 SELECT @num_muertos := COUNT(id) FROM `paciente` WHERE fatiga IS NOT NULL AND estado = 1;
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	fatiga,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_vivos AS prob,
@@ -121,7 +122,7 @@ ORDER BY fatiga DESC;
 
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	fatiga,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_muertos AS prob,
@@ -139,7 +140,7 @@ SELECT @num_vivos := COUNT(id) FROM `paciente` WHERE malestar IS NOT NULL AND es
 SELECT @num_muertos := COUNT(id) FROM `paciente` WHERE malestar IS NOT NULL AND estado = 1;
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	malestar,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_vivos AS prob,
@@ -150,7 +151,7 @@ ORDER BY malestar DESC;
 
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	malestar,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_muertos AS prob,
@@ -168,7 +169,7 @@ SELECT @num_vivos := COUNT(id) FROM `paciente` WHERE anorexia IS NOT NULL AND es
 SELECT @num_muertos := COUNT(id) FROM `paciente` WHERE anorexia IS NOT NULL AND estado = 1;
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	anorexia,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_vivos AS prob,
@@ -179,7 +180,7 @@ ORDER BY anorexia DESC;
 
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	anorexia,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_muertos AS prob,
@@ -197,7 +198,7 @@ SELECT @num_vivos := COUNT(id) FROM `paciente` WHERE higado_grande IS NOT NULL A
 SELECT @num_muertos := COUNT(id) FROM `paciente` WHERE higado_grande IS NOT NULL AND estado = 1;
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	higado_grande,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_vivos AS prob,
@@ -208,7 +209,7 @@ ORDER BY higado_grande DESC;
 
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	higado_grande,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_muertos AS prob,
@@ -226,7 +227,7 @@ SELECT @num_vivos := COUNT(id) FROM `paciente` WHERE higado_firme IS NOT NULL AN
 SELECT @num_muertos := COUNT(id) FROM `paciente` WHERE higado_firme IS NOT NULL AND estado = 1;
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	higado_firme,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_vivos AS prob,
@@ -237,7 +238,7 @@ ORDER BY higado_firme DESC;
 
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	higado_firme,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_muertos AS prob,
@@ -256,7 +257,7 @@ SELECT @num_vivos := COUNT(id) FROM `paciente` WHERE bazo_palpable IS NOT NULL A
 SELECT @num_muertos := COUNT(id) FROM `paciente` WHERE bazo_palpable IS NOT NULL AND estado = 1;
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	bazo_palpable,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_vivos AS prob,
@@ -267,7 +268,7 @@ ORDER BY bazo_palpable DESC;
 
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	bazo_palpable,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_muertos AS prob,
@@ -285,7 +286,7 @@ SELECT @num_vivos := COUNT(id) FROM `paciente` WHERE aranias IS NOT NULL AND est
 SELECT @num_muertos := COUNT(id) FROM `paciente` WHERE aranias IS NOT NULL AND estado = 1;
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	aranias,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_vivos AS prob,
@@ -296,7 +297,7 @@ ORDER BY aranias DESC;
 
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	aranias,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_muertos AS prob,
@@ -314,7 +315,7 @@ SELECT @num_vivos := COUNT(id) FROM `paciente` WHERE ascitis IS NOT NULL AND est
 SELECT @num_muertos := COUNT(id) FROM `paciente` WHERE ascitis IS NOT NULL AND estado = 1;
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	ascitis,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_vivos AS prob,
@@ -325,7 +326,7 @@ ORDER BY ascitis DESC;
 
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	ascitis,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_muertos AS prob,
@@ -344,7 +345,7 @@ SELECT @num_vivos := COUNT(id) FROM `paciente` WHERE varices IS NOT NULL AND est
 SELECT @num_muertos := COUNT(id) FROM `paciente` WHERE varices IS NOT NULL AND estado = 1;
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	varices,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_vivos AS prob,
@@ -355,7 +356,7 @@ ORDER BY varices DESC;
 
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	varices,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_muertos AS prob,
@@ -373,7 +374,7 @@ SELECT @num_vivos := COUNT(id) FROM `paciente` WHERE histologia IS NOT NULL AND 
 SELECT @num_muertos := COUNT(id) FROM `paciente` WHERE histologia IS NOT NULL AND estado = 1;
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	histologia,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_vivos AS prob,
@@ -384,7 +385,7 @@ ORDER BY histologia DESC;
 
 
 SELECT
-	estado,
+	REPLACE(REPLACE(estado, 1, 'muerto'), 2, 'vivo') AS estado,
 	histologia,
 	COUNT(id) AS muestras,
 	COUNT(id)/@num_muertos AS prob,
