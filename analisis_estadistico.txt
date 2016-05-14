@@ -1,10 +1,14 @@
-Referencias
+Referencias externas
 =======================================================================
-datos: https://archive.ics.uci.edu/ml/machine-learning-databases/hepatitis/hepatitis.data
+Datos: https://archive.ics.uci.edu/ml/machine-learning-databases/hepatitis/hepatitis.data
 Descripción de datos: https://archive.ics.uci.edu/ml/machine-learning-databases/hepatitis/hepatitis.names
 
+Referencias internas
+=======================================================================
+Datos: hepatitis.data.sql
+Análisis discreto: analisis_campos_discretos.sql
 
-Datos estadísticos respecto el sexo(genero)
+Datos estadísticos respecto el sexo(género)
 =======================================================================
 
 +--------+--------+----------+--------+------------+
@@ -26,7 +30,7 @@ Datos estadísticos respecto el sexo(genero)
 |              155 |
 +------------------+
 
-Esta ultima tabla "muestras_validas" nos muestra el tamaño de la muestras validas,la cual debe coincidir con la suma de las columnas muestras de las dos tablas anteriores. Notar que este valor puede cambiar en función del campo analizado ya que en algunos casos el valor para el campo analizado(en este caso sexo) puede aparecer como (?) lo cual significa que el valor es indefinido y por lo tanto no los podemos contar para el análisis estadístico, para mayores informes respecto a la distribución de campos indefinidos revisar el punto 8 del documento:
+Esta última tabla "muestras_validas" nos muestra el tamaño de la muestras válidas,la cual debe coincidir con la suma de las columnas muestras de las dos tablas anteriores. Notar que este valor puede cambiar en función del campo analizado ya que en algunos casos el valor para el campo analizado(en este caso sexo) puede aparecer como (?) lo cual significa que el valor es indefinido y por lo tanto no los podemos contar para el análisis estadístico, para mayores informes respecto a la distribución de campos indefinidos revisar el punto 8 del documento:
 
 https://archive.ics.uci.edu/ml/machine-learning-databases/hepatitis/hepatitis.names
 
