@@ -1,12 +1,14 @@
 Referencias externas
 =======================================================================
-Datos: <https://archive.ics.uci.edu/ml/machine-learning-databases/hepatitis/hepatitis.data>
-Descripción de datos: <https://archive.ics.uci.edu/ml/machine-learning-databases/hepatitis/hepatitis.names>
+
+ - Datos: <https://archive.ics.uci.edu/ml/machine-learning-databases/hepatitis/hepatitis.data>
+ - Descripción de datos: <https://archive.ics.uci.edu/ml/machine-learning-databases/hepatitis/hepatitis.names>
 
 Referencias internas
 =======================================================================
-Datos: hepatitis.data.sql
-Análisis discreto: analisis_campos_discretos.sql
+
+ - Datos: hepatitis.data.sql
+ - Análisis discreto: analisis_campos_discretos.sql
 
 Datos estadísticos respecto el sexo(género)
 =======================================================================
