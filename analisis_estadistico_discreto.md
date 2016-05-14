@@ -7,8 +7,8 @@ Referencias externas
 Referencias internas
 =======================================================================
 
- - Datos: hepatitis.data.sql
- - Análisis discreto: analisis_campos_discretos.sql
+ - Datos: [hepatitis.data.sql](/hepatitis.data.sql)
+ - Análisis discreto: [analisis_campos_discretos.sql](/analisis_campos_discretos.sql)
 
 Datos estadísticos respecto el sexo(género)
 =======================================================================
