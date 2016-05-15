@@ -7,8 +7,8 @@ Referencias externas
 Referencias internas
 =======================================================================
 
- - Datos: [hepatitis.data.sql](/hepatitis.data.sql)
- - Análisis continuo: [analisis_campos_discretos.sql](/analisis_campos_continuos.sql)
+ - Datos: [hepatitis.data.sql](./hepatitis.data.sql)
+ - Análisis continuo: [analisis_campos_discretos.sql](./analisis_campos_continuos.sql)
 
 Edad campo 3
 =======================================================================
