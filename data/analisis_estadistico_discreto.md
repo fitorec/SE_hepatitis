@@ -32,6 +32,19 @@ Datos estadísticos respecto el sexo(género)
 	|              155 |
 	+------------------+
 
+	Probabilidad condicional muerto dado hombre
+	+--------------------+
+	| muerto_dado_hombre |
+	+--------------------+
+	|             0.2302 |
+	+--------------------+
+	Probabilidad condicional muerto dado mujer
+	+-------------------+
+	| muerto_dado_mujer |
+	+-------------------+
+	|            0.0000 |
+	+-------------------+
+
 Esta última tabla "muestras_validas" nos muestra el tamaño de la muestras válidas,la cual debe coincidir con la suma de las columnas muestras de las dos tablas anteriores. Notar que este valor puede cambiar en función del campo analizado ya que en algunos casos el valor para el campo analizado(en este caso sexo) puede aparecer como (?) lo cual significa que el valor es indefinido y por lo tanto no los podemos contar para el análisis estadístico, para mayores informes respecto a la distribución de campos indefinidos revisar el punto 8 del documento:
 
 <https://archive.ics.uci.edu/ml/machine-learning-databases/hepatitis/hepatitis.names>
@@ -60,6 +73,20 @@ esteroides campo 4
 	|              154 |
 	+------------------+
 
+	Probabilidad condicional: muerto dado esteroides NO(1)
+	+---------------------------+
+	| muerto_dado_esteroides_no |
+	+---------------------------+
+	|                    0.2632 |
+	+---------------------------+
+	Probabilidad condicional: muerto dado esteroides SI(2)
+	+---------------------------+
+	| muerto_dado_esteroides_si |
+	+---------------------------+
+	|                    0.1538 |
+	+---------------------------+
+
+
 antivirales campo 5
 =======================================================================
 
@@ -83,6 +110,20 @@ antivirales campo 5
 	|              155 |
 	+------------------+
 
+	Probabilidad condicional: muerto dado antivirales NO(1)
+	+----------------------------+
+	| muerto_dado_antivirales_no |
+	+----------------------------+
+	|                     0.0833 |
+	+----------------------------+
+	Probabilidad condicional: muerto dado antivirales SI(2)
+	+----------------------------+
+	| muerto_dado_antivirales_si |
+	+----------------------------+
+	|                     0.2290 |
+	+----------------------------+
+
+
 fatiga campo 6
 =======================================================================
 
@@ -105,6 +146,19 @@ fatiga campo 6
 	+------------------+
 	|              154 |
 	+------------------+
+
+	Probabilidad condicional: muerto dado fatiga NO(1)
+	+-----------------------+
+	| muerto_dado_fatiga_no |
+	+-----------------------+
+	|                0.3000 |
+	+-----------------------+
+	Probabilidad condicional: muerto dado fatiga SI(2)
+	+-----------------------+
+	| muerto_dado_fatiga_si |
+	+-----------------------+
+	|                0.0370 |
+	+-----------------------+
 
 
 malestar campo 7
@@ -130,6 +184,21 @@ malestar campo 7
 	|              154 |
 	+------------------+
 
+	Probabilidad condicional: muerto dado malestar NO(1)
+	+-------------------------+
+	| muerto_dado_malestar_no |
+	+-------------------------+
+	|                  0.3770 |
+	+-------------------------+
+	Probabilidad condicional: muerto dado malestar SI(2)
+	+-------------------------+
+	| muerto_dado_malestar_si |
+	+-------------------------+
+	|                  0.0968 |
+	+-------------------------+
+
+
+
 anorexia campo 8
 =======================================================================
 
@@ -152,6 +221,20 @@ anorexia campo 8
 	+------------------+
 	|              154 |
 	+------------------+
+	
+	Probabilidad condicional: muerto dado anorexia NO(1)
+	+-------------------------+
+	| muerto_dado_anorexia_no |
+	+-------------------------+
+	|                  0.3125 |
+	+-------------------------+
+	Probabilidad condicional: muerto dado anorexia SI(2)
+	+-------------------------+
+	| muerto_dado_anorexia_si |
+	+-------------------------+
+	|                  0.1803 |
+	+-------------------------+
+
 
 higado_grande campo 9
 =======================================================================
@@ -176,6 +259,19 @@ higado_grande campo 9
 	|              145 |
 	+------------------+
 
+	Probabilidad condicional: muerto dado higado_grande NO(1)
+	+------------------------------+
+	| muerto_dado_higado_grande_no |
+	+------------------------------+
+	|                       0.1200 |
+	+------------------------------+
+	Probabilidad condicional: muerto dado higado_grande SI(2)
+	+------------------------------+
+	| muerto_dado_higado_grande_si |
+	+------------------------------+
+	|                       0.2000 |
+	+------------------------------+
+
 
 higado_firme campo 10
 =======================================================================
@@ -199,6 +295,19 @@ higado_firme campo 10
 	+------------------+
 	|              144 |
 	+------------------+
+	
+	Probabilidad condicional: muerto dado higado_firme NO(1)
+	+-----------------------------+
+	| muerto_dado_higado_firme_no |
+	+-----------------------------+
+	|                      0.2167 |
+	+-----------------------------+
+	Probabilidad condicional: muerto dado higado_firme SI(2)
+	+-----------------------------+
+	| muerto_dado_higado_firme_si |
+	+-----------------------------+
+	|                      0.1667 |
+	+-----------------------------+
 
 
 bazo_palpable campo 11 (¿molestia evidente?)
@@ -224,6 +333,20 @@ bazo_palpable campo 11 (¿molestia evidente?)
 	|              150 |
 	+------------------+
 
+	Probabilidad condicional: muerto dado bazo_palpable NO(1)
+	+------------------------------+
+	| muerto_dado_bazo_palpable_no |
+	+------------------------------+
+	|                       0.4000 |
+	+------------------------------+
+	Probabilidad condicional: muerto dado bazo_palpable SI(2)
+	+------------------------------+
+	| muerto_dado_bazo_palpable_si |
+	+------------------------------+
+	|                       0.1583 |
+	+------------------------------+
+
+
 aranias(arañas) campo 12
 =======================================================================
 
@@ -246,6 +369,19 @@ aranias(arañas) campo 12
 	+------------------+
 	|              150 |
 	+------------------+
+
+	Probabilidad condicional: muerto dado aranias NO(1)
+	+------------------------+
+	| muerto_dado_aranias_no |
+	+------------------------+
+	|                 0.4314 |
+	+------------------------+
+	Probabilidad condicional: muerto dado aranias SI(2)
+	+------------------------+
+	| muerto_dado_aranias_si |
+	+------------------------+
+	|                 0.0909 |
+	+------------------------+
 
 ascitis campo 13
 =======================================================================
@@ -270,6 +406,20 @@ ascitis campo 13
 	|              150 |
 	+------------------+
 
+	Probabilidad condicional: muerto dado ascitis NO(1)
+	+------------------------+
+	| muerto_dado_ascitis_no |
+	+------------------------+
+	|                 0.7000 |
+	+------------------------+
+	Probabilidad condicional: muerto dado ascitis SI(2)
+	+------------------------+
+	| muerto_dado_ascitis_si |
+	+------------------------+
+	|                 0.1308 |
+	+------------------------+
+
+
 varices campo 14
 =======================================================================
 
@@ -293,6 +443,21 @@ varices campo 14
 	|              150 |
 	+------------------+
 
+	Probabilidad condicional: muerto dado varices NO(1)
+	+------------------------+
+	| muerto_dado_varices_no |
+	+------------------------+
+	|                 0.6111 |
+	+------------------------+
+	Probabilidad condicional: muerto dado varices SI(2)
+	+------------------------+
+	| muerto_dado_varices_si |
+	+------------------------+
+	|                 0.1515 |
+	+------------------------+
+
+
+
 histologia campo 20
 =======================================================================
 
@@ -315,3 +480,16 @@ histologia campo 20
 	+------------------+
 	|              155 |
 	+------------------+
+
+	Probabilidad condicional: muerto dado histologia NO(1)
+	+---------------------------+
+	| muerto_dado_histologia_no |
+	+---------------------------+
+	|                    0.0824 |
+	+---------------------------+
+	Probabilidad condicional: muerto dado histologia SI(2)
+	+---------------------------+
+	| muerto_dado_histologia_si |
+	+---------------------------+
+	|                    0.3571 |
+	+---------------------------+
