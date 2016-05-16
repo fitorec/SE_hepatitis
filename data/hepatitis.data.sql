@@ -5,9 +5,9 @@
 -- Para obtener mas información consultar la descripción de datos:
 -- URL: https://archive.ics.uci.edu/ml/machine-learning-databases/hepatitis/hepatitis.names
 
-DROP TABLE IF EXISTS paciente;
+DROP TABLE IF EXISTS pacientes;
 
-CREATE TABLE paciente(
+CREATE TABLE pacientes(
 	id INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	estado INT(2) NOT NULL COMMENT 'Field 1, Vivo 2, muerto 1',
 	edad INT(2) NOT NULL COMMENT 'Field 2',
@@ -33,7 +33,7 @@ CREATE TABLE paciente(
 
 
 
-INSERT INTO  `paciente` (
+INSERT INTO  `pacientes` (
 	`estado` ,`edad` ,`sexo` ,`esteroides` ,`antivirales` ,`fatiga` ,`malestar` ,
 	`anorexia` ,`higado_grande` ,`higado_firme` ,`bazo_palpable` ,`aranias`
 	,`ascitis` ,`varices` ,`bilirrubina` ,`fosfato_alk` ,`sgot` ,`albumina`,
