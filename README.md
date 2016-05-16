@@ -13,3 +13,14 @@ La minería de datos fue realizada con `SQL` pasando los [daatos](https://archiv
 ## Programación del Sistema.
 
 El sistema esta siendo desarrollado con el lenguaje [`CLIPS`](http://clipsrules.sourceforge.net/) que nos provee un entorno de desarrollo para la producción y ejecución de sistemas expertos.
+
+
+## Correr
+
+	(clear)
+	(load "/home/fitorec/Documentos/utm/PROYECTO/src/paciente.clp")
+	(load-facts "/home/fitorec/Documentos/utm/PROYECTO/src/hechos.clp")
+	(load "/home/fitorec/Documentos/utm/PROYECTO/src/reglas.clp")
+	(run)
+	(assert (menu (accion resultados)))
+	(run)

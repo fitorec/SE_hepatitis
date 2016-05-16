@@ -46,3 +46,9 @@
 	(slot protime_checked (type INTEGER) (range 0 1) (default 0))
 	(slot histologia_checked (type INTEGER) (range 0 1) (default 0))
 )
+
+
+(
+	deftemplate menu "El estado de un menu"
+	(slot accion)
+)
